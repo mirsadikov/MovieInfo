@@ -71,7 +71,7 @@ const HomeScreen = () => {
         <h2>Now playing:</h2>
         <div className="container">
           <div className="containerNowplaying figureContainer">
-            <section class="figuresContainer">
+            <section className="figuresContainer">
               {nowPlayingMovies &&
                 nowPlayingMovies.results.map((movie) => (
                   <Link to={`/details/${movie.id}`} key={movie.id}>
