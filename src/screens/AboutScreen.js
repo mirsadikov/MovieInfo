@@ -3,7 +3,7 @@ import React from "react";
 const AboutScreen = () => {
   return (
     <>
-      <main class="about">
+      <main className="about">
         <section>
           <p>
             <a href="./index.html">Home</a> / <a href="./about.html">About</a>
@@ -12,7 +12,7 @@ const AboutScreen = () => {
         </section>
       </main>
 
-      <article class="about">
+      <article className="about">
         <i>
           “This website was created to fulfill Web Technology module’s
           requirements and does not represent an actual company or service”.
