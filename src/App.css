@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
 /* * {
   margin: 0;
   padding: 0;
@@ -852,5 +854,341 @@ footer a:hover {
   footer {
     padding: 10px 5px;
     font-size: 14px;
+  }
+}
+
+/* About page */
+/* About page */
+/* About page */
+/* About page */
+/* About page */
+/* About page */
+/* About page */
+/* About page */
+/* About page */
+/* About page */
+/* About page */
+/* About page */
+/* About page */
+
+main.about {
+  text-align: center;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(./images/bg.jpg) no-repeat;
+  background-size: cover;
+}
+main.about > section {
+  padding: 150px 0 20px 0;
+}
+main.about > section p {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+  width: 400px;
+}
+main.about > section a {
+  text-decoration: none;
+  color: #c1c1c1;
+}
+main.about > section h2 {
+  color: #eeeeee;
+  font-size: 35px;
+}
+
+/* about--article */
+article.about {
+  border-top: 8px solid #222222;
+  text-align: center;
+  padding: 70px 0 20px 0;
+}
+article.about > i {
+  color: #fff;
+}
+article.about > section {
+  margin: 150px auto 30px;
+}
+
+article.about > section > div {
+  width: 50%;
+  background-color: rgb(99, 99, 99);
+  padding: 50px 30px;
+  border-radius: 10px;
+  color: white;
+  line-height: 25px;
+  letter-spacing: 1.5px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+}
+article.about > section > div:nth-child(1) {
+  position: relative;
+  left: -10%;
+}
+article.about > section > div:nth-child(2) {
+  background: rgba(207, 207, 207, 0.2);
+  backdrop-filter: blur(8px);
+  position: relative;
+  top: -30px;
+  left: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+article.about > section > div li {
+  list-style: none;
+}
+article.about > section > div:nth-child(2) h3 {
+  margin-top: 0;
+}
+article.about > section > div:nth-child(2) ul {
+  padding-left: 0px;
+}
+article.about > section > div:nth-child(3) {
+  position: relative;
+  top: -60px;
+  left: -3%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ---------------RESPONSIVE---------------- */
+
+/* RESPONSIVE 768x1024 */
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  /* main */
+  main.about > section {
+    padding-top: 150px !important;
+  }
+  main.about > section p {
+    width: 400px;
+  }
+  main.about > section h2 {
+    font-size: 34px;
+  }
+  /* article */
+  article.about i {
+    width: 85%;
+    display: block;
+    margin: auto;
+    font-size: 16px;
+  }
+  article.about > section {
+    margin-top: 75px;
+    font-size: 16px;
+  }
+  article.about > section > div {
+    line-height: 24px;
+    width: 65%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+  article.about > section > div:nth-child(1) {
+    left: -5%;
+  }
+  article.about > section > div:nth-child(2) {
+    left: 5%;
+    top: -15px;
+  }
+
+  article.about > section > div:nth-child(3) {
+    top: -30px;
+  }
+}
+
+/* RESPONSIVE 576x767 */
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  /* main */
+  main.about > section {
+    padding-top: 150px !important;
+  }
+  main.about > section p {
+    width: 300px;
+  }
+  main.about > section h2 {
+    margin: 10px;
+    font-size: 34px;
+  }
+  /* article */
+  article.about i {
+    width: 85%;
+    display: block;
+    margin: auto;
+    font-size: 16px;
+  }
+  article.about > section {
+    margin-top: 75px;
+    font-size: 16px;
+  }
+  article.about > section > div {
+    line-height: 24px;
+    width: 80%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+  article.about > section > div:nth-child(1) {
+    left: -5%;
+  }
+  article.about > section > div:nth-child(2) {
+    left: 5%;
+    top: -15px;
+  }
+  article.about > section > div:nth-child(3) {
+    top: -30px;
+  }
+}
+
+/* 426px and 575px */
+@media screen and (max-width: 575px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  /* main */
+  main.about > section {
+    padding-top: 150px !important;
+  }
+  main.about > section p {
+    width: 250px;
+  }
+  main.about > section h2 {
+    margin: 10px;
+    font-size: 34px;
+  }
+  /* article */
+  article.about i {
+    width: 85%;
+    display: block;
+    margin: auto;
+    font-size: 16px;
+  }
+  article.about > section {
+    margin-top: 75px;
+    font-size: 16px;
+  }
+  article.about > section > div {
+    padding: 0px;
+    line-height: 22px;
+    width: 80%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  article.about > section > div:nth-child(1) {
+    left: -5%;
+  }
+  article.about > section > div:nth-child(2) {
+    left: 5%;
+    top: -15px;
+  }
+  article.about > section > div:nth-child(3) {
+    top: -30px;
+  }
+}
+
+/* 351px and 425px */
+@media screen and (max-width: 425px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  /* main */
+  main.about > section {
+    padding-top: 100px !important;
+  }
+  main.about > section p {
+    width: 200px;
+  }
+  main.about > section h2 {
+    margin: 10px;
+    font-size: 30px;
+  }
+  /* article */
+  article.about i {
+    width: 85%;
+    display: block;
+    margin: auto;
+    font-size: 12px;
+  }
+  article.about > section {
+    margin-top: 75px;
+    font-size: 14px;
+  }
+  article.about > section > div {
+    padding: 0px;
+    line-height: 18px;
+    width: 80%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  article.about > section > div:nth-child(1) {
+    left: -5%;
+  }
+  article.about > section > div:nth-child(2) {
+    left: 5%;
+    top: -15px;
+  }
+  article.about > section > div:nth-child(3) {
+    top: -30px;
+  }
+}
+
+/* under 350 px */
+@media screen and (max-width: 350px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  /* main */
+  main.about > section {
+    padding-top: 100px !important;
+  }
+  main.about > section p {
+    width: 200px;
+  }
+  main.about > section h2 {
+    margin: 10px;
+    font-size: 30px;
+  }
+  /* article */
+  article.about i {
+    width: 85%;
+    display: block;
+    margin: auto;
+    font-size: 12px;
+  }
+  article.about > section {
+    margin-top: 75px;
+    font-size: 12px;
+  }
+  article.about > section > div {
+    padding: 0px;
+    line-height: 14px;
+    width: 280px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  article.about > section > div:nth-child(1) {
+    left: -10px;
+  }
+  article.about > section > div:nth-child(2) {
+    left: 10px;
+    top: -15px;
+  }
+  article.about > section > div:nth-child(3) {
+    top: -30px;
   }
 }
