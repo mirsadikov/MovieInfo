@@ -1,7 +1,27 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+const trendingMoviesAPI =
+  "https://api.themoviedb.org/3/trending/movie/day?api_key=2050ac8db077eda8b90b74a0f1423975";
+const nowPlayingMoviesAPI =
+  "https://api.themoviedb.org/3/movie/now_playing?api_key=2050ac8db077eda8b90b74a0f1423975&language=en-US&page=1";
 
 const HomeScreen = () => {
+  const [trendingMovies, setTrendingMovies] = useState();
+  const [nowPlayingMovies, setNowPlayingMovies] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data: trending } = await axios.get(trendingMoviesAPI);
+      const { data: nowPlaying } = await axios.get(nowPlayingMoviesAPI);
+
+      setTrendingMovies(trending);
+      setNowPlayingMovies(nowPlaying);
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <main className="home">
@@ -28,12 +48,46 @@ const HomeScreen = () => {
       <section className="home movieType">
         <h2>Trending today:</h2>
         <div className="container">
-          <div className="containerPopular figureContainer"></div>
+          <div className="containerPopular figureContainer">
+            <section className="figuresContainer">
+              {trendingMovies &&
+                trendingMovies.results.map((movie) => (
+                  <Link to={`/details/${movie.id}`} key={movie.id}>
+                    <figure>
+                      <img
+                        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        alt={movie.original_title}
+                      />
+                      <figcaption>
+                        {movie.original_title || movie.original_name}
+                      </figcaption>
+                    </figure>
+                  </Link>
+                ))}
+            </section>
+          </div>
         </div>
 
         <h2>Now playing:</h2>
         <div className="container">
-          <div className="containerNowplaying figureContainer"></div>
+          <div className="containerNowplaying figureContainer">
+            <section class="figuresContainer">
+              {nowPlayingMovies &&
+                nowPlayingMovies.results.map((movie) => (
+                  <Link to={`/details/${movie.id}`} key={movie.id}>
+                    <figure>
+                      <img
+                        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        alt={movie.original_title}
+                      />
+                      <figcaption>
+                        {movie.original_title || movie.original_name}
+                      </figcaption>
+                    </figure>
+                  </Link>
+                ))}
+            </section>
+          </div>
         </div>
 
         <h2 id="genre">By category:</h2>
