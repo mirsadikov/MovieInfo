@@ -14,5 +14,12 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        var navScroll = document.querySelector("header");
+        navScroll.classList.toggle("fixed", window.scrollY > 50);
+      });
+    </script>
   </body>
 </html>
