@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboutScreen = () => {
   return (
@@ -6,7 +7,7 @@ const AboutScreen = () => {
       <main className="about">
         <section>
           <p>
-            <a href="./index.html">Home</a> / <a href="./about.html">About</a>
+            <Link to="/">Home</Link> / <Link to="/about">About</Link>
           </p>
           <h2>ABOUT</h2>
         </section>
