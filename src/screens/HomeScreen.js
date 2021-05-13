@@ -7,9 +7,10 @@ const trendingMoviesAPI =
 const nowPlayingMoviesAPI =
   "https://api.themoviedb.org/3/movie/now_playing?api_key=2050ac8db077eda8b90b74a0f1423975&language=en-US&page=1";
 
-const HomeScreen = () => {
+const HomeScreen = ({ history }) => {
   const [trendingMovies, setTrendingMovies] = useState();
   const [nowPlayingMovies, setNowPlayingMovies] = useState();
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,6 +22,11 @@ const HomeScreen = () => {
     };
     fetchData();
   }, []);
+
+  const searchHandler = (e) => {
+    e.preventDefault();
+    history.push(`/search?q=${searchQuery}`);
+  };
 
   return (
     <>
@@ -37,8 +43,13 @@ const HomeScreen = () => {
                 type="text"
                 placeholder="Search by name..."
                 id="movieNameInputHome"
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button type="submit" id="homeSearchButton">
+              <button
+                type="submit"
+                id="homeSearchButton"
+                onClick={searchHandler}
+              >
                 Search
               </button>
             </form>

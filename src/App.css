@@ -23,7 +23,7 @@ body {
   font-family: sans-serif;
   background-color: #000;
   scroll-behavior: smooth;
-  /* height: 2000px; */
+  height: 2000px;
 }
 header {
   padding: 30px 75px 30px 75px;
@@ -1607,6 +1607,438 @@ button#more {
   }
 
   /* section content */
+  section#resultContainer {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+  #resultContainer .figuresContainer {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  #resultContainer figure {
+    margin: 0 auto 20px;
+    height: 230px;
+    width: 120px;
+  }
+  #resultContainer img {
+    max-height: 180px;
+    width: 100%;
+  }
+  #resultContainer figcaption {
+    height: 50px;
+    font-size: 14px;
+    margin: 0px 0;
+  }
+}
+
+main.result {
+  text-align: center;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(./images/bg.jpg) no-repeat;
+  background-size: cover;
+}
+main.result > section {
+  padding: 100px 0 20px 0;
+}
+main.result > section p {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  width: 400px;
+  outline: none;
+}
+main.result > section a {
+  text-decoration: none;
+  color: #c1c1c1;
+}
+main.result > section h2 {
+  color: #eeeeee;
+  font-size: 35px;
+}
+main.result div.container {
+  display: inline-block;
+  background-color: white !important;
+  border: none;
+  border-radius: 50px;
+  width: 400px;
+  height: 45px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+main.result form {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main.result input,
+main.result button {
+  border: none;
+  height: 100%;
+  border-radius: 50px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+main.result input {
+  width: 75%;
+  padding-left: 30px;
+}
+main.result button {
+  margin-right: 2px;
+  height: 90%;
+  cursor: pointer;
+  background-color: #e50914;
+  padding: 0 15px 0 15px;
+  transition: 0.2s ease;
+  color: #222222;
+}
+main.result button:hover {
+  transform: scale(1.1);
+}
+
+/* Result container */
+
+section.content {
+  border-top: 8px solid #222222;
+}
+.type-input {
+  display: none;
+}
+#content-type {
+  text-align: center;
+  margin-top: 50px;
+}
+#typemovie {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+#typeserie {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+input.type-input:checked + div.movieType {
+  background-color: #222222;
+  border: 1px solid #e50914;
+}
+
+div.movieType {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 50px;
+  width: 110px;
+  background-color: #333333;
+  color: #c1c1c1;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+#resultContainer {
+  max-width: 1200px;
+  margin: 50px auto 50px;
+  padding: 0;
+}
+#resultContainer > h1 {
+  color: white;
+  text-align: center;
+  /* margin-bottom: 200px; */
+}
+#resultContainer .figuresContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+#resultContainer figure {
+  margin: 0 auto 50px;
+  transition: 0.2s ease;
+  background-color: #333333;
+  border-radius: 20px;
+  height: 400px;
+  width: 250px;
+  padding: 6px;
+  text-align: center;
+}
+#resultContainer figure:hover {
+  transform: scale(1.1);
+}
+#resultContainer img {
+  max-height: 350px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+#resultContainer figcaption {
+  color: white;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#resultContainer a {
+  text-decoration: none;
+}
+#resultContainer .duck {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
+/* ----------------RESPONSIVE-------------------- */
+/* ----------------RESPONSIVE-------------------- */
+/* ----------------RESPONSIVE-------------------- */
+/* ----------------RESPONSIVE-------------------- */
+
+/* RESPONSIVE 768x1024 */
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  main.result > section {
+    padding-top: 120px !important;
+  }
+  main.result > section p {
+    width: 350px;
+    padding-bottom: 10px;
+  }
+  main.result > section h2 {
+    margin: 20px;
+    font-size: 30px;
+  }
+  main.result > section div {
+    width: 340px !important;
+    height: 40px !important;
+    margin: 10px 0 !important;
+  }
+  main.result > section div form * {
+    font-size: 18px;
+  }
+  main.result > section div input {
+    padding-left: 15px;
+  }
+
+  /* result--section */
+  section#resultContainer {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+  #resultContainer .figuresContainer {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
+  #resultContainer figure {
+    margin: 0 auto 30px;
+    height: 80%;
+    width: 85%;
+  }
+  #resultContainer img {
+    max-height: 85%;
+    width: 100%;
+  }
+  #resultContainer figcaption {
+    height: 10%;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+}
+
+/* RESPONSIVE 576x767 */
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  main.result > section {
+    padding-top: 120px !important;
+  }
+  main.result > section p {
+    width: 250px;
+    padding-bottom: 10px;
+  }
+  main.result > section h2 {
+    margin: 10px;
+    font-size: 30px;
+  }
+  main.result > section div {
+    width: 300px !important;
+    height: 40px !important;
+    margin: 10px 0 !important;
+  }
+  main.result > section div form * {
+    font-size: 16px;
+  }
+  main.result > section div input {
+    padding-left: 15px;
+  }
+
+  /* result--section */
+  section#resultContainer {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+  #resultContainer .figuresContainer {
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+  }
+  #resultContainer figure {
+    margin: 0 auto 30px;
+    height: 80%;
+    width: 85%;
+  }
+  #resultContainer img {
+    max-height: 85%;
+    width: 100%;
+  }
+  #resultContainer figcaption {
+    height: 10%;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+}
+
+/* 426px and 575px */
+@media screen and (max-width: 575px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  main.result > section {
+    padding-top: 90px !important;
+  }
+  main.result > section p {
+    width: 200px;
+    padding-bottom: 10px;
+  }
+  main.result > section h2 {
+    margin: 10px;
+    font-size: 30px;
+  }
+  main.result > section div {
+    width: 290px !important;
+    height: 40px !important;
+    margin: 10px 0 !important;
+  }
+  main.result > section div form * {
+    font-size: 16px;
+  }
+  main.result > section div input {
+    padding-left: 15px;
+  }
+
+  /* result--section */
+  section#resultContainer {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+  #resultContainer .figuresContainer {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+  #resultContainer figure {
+    margin: 0 auto 30px;
+    height: 80%;
+    width: 85%;
+  }
+  #resultContainer img {
+    max-height: 85%;
+    width: 100%;
+  }
+  #resultContainer figcaption {
+    height: 10%;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+}
+
+/* 351px and 425px */
+@media screen and (max-width: 425px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  main.result > section {
+    padding-top: 90px !important;
+  }
+  main.result > section p {
+    width: 200px;
+    padding-bottom: 10px;
+  }
+  main.result > section h2 {
+    margin: 10px;
+    font-size: 30px;
+  }
+  main.result > section div {
+    width: 260px !important;
+    height: 40px !important;
+    margin: 10px 0 !important;
+  }
+  main.result > section div form * {
+    font-size: 16px;
+  }
+  main.result > section div input {
+    padding-left: 15px;
+  }
+
+  /* result--section */
+  section#resultContainer {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+  #resultContainer .figuresContainer {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  #resultContainer figure {
+    margin: 0 auto 30px;
+    height: 80%;
+    width: 85%;
+  }
+  #resultContainer img {
+    max-height: 85%;
+    width: 100%;
+  }
+  #resultContainer figcaption {
+    height: 10%;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+}
+
+/* under 350 px */
+@media screen and (max-width: 350px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  main.result > section {
+    padding-top: 90px !important;
+  }
+  main.result > section p {
+    width: 200px;
+    padding-bottom: 10px;
+  }
+  main.result > section h2 {
+    margin: 10px;
+    font-size: 30px;
+  }
+  main.result > section div {
+    width: 250px !important;
+    height: 40px !important;
+    margin: 10px 0 !important;
+  }
+  main.result > section div form * {
+    font-size: 16px;
+  }
+  main.result > section div input {
+    padding-left: 15px;
+  }
+
+  /* result--section */
   section#resultContainer {
     margin-top: 50px;
     padding: 0 10px;

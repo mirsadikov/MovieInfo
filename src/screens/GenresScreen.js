@@ -29,7 +29,7 @@ const GenresScreen = ({ match }) => {
       // console.log(moviesData.results);
 
       setgenreName(genre.name);
-      setMoviesList([...moviesList, ...moviesData.results]);
+      setMoviesList((storedData) => [...storedData, ...moviesData.results]);
     };
 
     fetchAPI();
