@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div>
-        Copyright &copy
+        Copyright &copy;
         <script>document.write(new Date().getFullYear());</script>
       </div>
       <div>
