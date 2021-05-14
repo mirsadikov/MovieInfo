@@ -2,11 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import netflixIcon from "../images/netflix.png";
+import { Spinner } from "react-bootstrap";
 
 const DetailsScreen = ({ match }) => {
   const movieID = match.params.id;
 
-  const [movieInfo, setMovieInfo] = useState({});
+  const [movieInfo, setMovieInfo] = useState();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,7 +25,7 @@ const DetailsScreen = ({ match }) => {
     fetchData();
   }, [movieID]);
 
-  return (
+  return movieInfo ? (
     <>
       <main className="details">
         <section>
@@ -180,6 +181,23 @@ const DetailsScreen = ({ match }) => {
           </section>
         </>
       )}
+    </>
+  ) : (
+    <>
+      <div id="emptySpace"></div>
+      <div id="loadinggg">
+        <Spinner
+          id="spinner"
+          animation="border"
+          role="status"
+          style={{
+            width: "100px",
+            height: "100px",
+            margin: "auto",
+            display: "block",
+          }}
+        ></Spinner>
+      </div>
     </>
   );
 };

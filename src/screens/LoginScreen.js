@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const LoginScreen = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const submitHandler = (e) => {
     e.preventDefault();
   };
