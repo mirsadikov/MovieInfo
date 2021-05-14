@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useReducer, useState } from "react";
 import { Link } from "react-router-dom";
 import noimage from "../images/no-image.png";
+import duck from "../images/duck.gif";
 
 const SearchScreen = ({ location }) => {
   const [query, setQuery] = useState();
@@ -9,6 +10,7 @@ const SearchScreen = ({ location }) => {
   const [isMovie, setIsMovie] = useState(true);
   const [moviesList, setMoviesList] = useState([]);
 
+  // useReducer
   // const [state, dispatch] = useReducer(reducer, initialState, init)
 
   useEffect(() => {
@@ -131,7 +133,10 @@ const SearchScreen = ({ location }) => {
                 ))}
               </section>
             ) : (
-              <h1>No movies</h1>
+              <>
+                <h1>No movies</h1>
+                <img className="duck" src={duck} alt="duck" />
+              </>
             )
           ) : (
             <h1>Search something</h1>
