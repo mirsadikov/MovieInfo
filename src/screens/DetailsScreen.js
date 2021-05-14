@@ -27,7 +27,7 @@ const DetailsScreen = ({ match, history }) => {
     };
 
     fetchData();
-  }, [movieID]);
+  }, [movieID, history]);
 
   return movieInfo ? (
     <>
