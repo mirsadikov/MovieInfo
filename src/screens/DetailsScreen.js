@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import netflixIcon from "../images/netflix.png";
 import { Spinner } from "react-bootstrap";
 
-const DetailsScreen = ({ match }) => {
+const DetailsScreen = ({ match, history }) => {
   const movieID = match.params.id;
 
   const [movieInfo, setMovieInfo] = useState();
@@ -14,12 +14,16 @@ const DetailsScreen = ({ match }) => {
     // console.log(movieID);
 
     const fetchData = async () => {
-      const { data: movieData } = await axios.get(
-        `https://api.themoviedb.org/3/movie/${movieID}?api_key=2050ac8db077eda8b90b74a0f1423975&append_to_response=videos%2Cimages`
-      );
-
-      setMovieInfo(movieData);
-      console.log(movieData);
+      try {
+        const { data: movieData } = await axios.get(
+          `https://api.themoviedb.org/3/movie/${movieID}?api_key=2050ac8db077eda8b90b74a0f1423975&append_to_response=videos%2Cimages`
+        );
+        setMovieInfo(movieData);
+        console.log(movieData);
+      } catch (error) {
+        console.log(error.stack);
+        history.push("/");
+      }
     };
 
     fetchData();
