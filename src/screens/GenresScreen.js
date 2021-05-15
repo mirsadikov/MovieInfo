@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const GenresScreen = ({ match }) => {
@@ -42,7 +43,7 @@ const GenresScreen = ({ match }) => {
     setpage(page + 1);
   };
 
-  return (
+  return moviesList.length > 0 ? (
     <>
       <main className="genre">
         <section>
@@ -79,6 +80,23 @@ const GenresScreen = ({ match }) => {
           MORE
         </button>
       </section>
+    </>
+  ) : (
+    <>
+      <div id="emptySpace"></div>
+      <div id="loadinggg">
+        <Spinner
+          id="spinner"
+          animation="border"
+          role="status"
+          style={{
+            width: "100px",
+            height: "100px",
+            margin: "auto",
+            display: "block",
+          }}
+        ></Spinner>
+      </div>
     </>
   );
 };

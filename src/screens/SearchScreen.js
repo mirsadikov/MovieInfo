@@ -3,6 +3,7 @@ import { useEffect, useReducer, useState } from "react";
 import { Link } from "react-router-dom";
 import noimage from "../images/no-image.png";
 import duck from "../images/duck.gif";
+import { Spinner } from "react-bootstrap";
 
 const SearchScreen = ({ location }) => {
   const [query, setQuery] = useState();
@@ -46,7 +47,7 @@ const SearchScreen = ({ location }) => {
     setIsMovie(!isMovie);
   };
 
-  return (
+  return moviesList.length > 0 ? (
     <>
       <main className="result">
         <section>
@@ -144,6 +145,23 @@ const SearchScreen = ({ location }) => {
           )}
         </section>
       </section>
+    </>
+  ) : (
+    <>
+      <div id="emptySpace"></div>
+      <div id="loadinggg">
+        <Spinner
+          id="spinner"
+          animation="border"
+          role="status"
+          style={{
+            width: "100px",
+            height: "100px",
+            margin: "auto",
+            display: "block",
+          }}
+        ></Spinner>
+      </div>
     </>
   );
 };
