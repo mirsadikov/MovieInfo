@@ -5,7 +5,7 @@ import noimage from "../images/no-image.png";
 import duck from "../images/duck.gif";
 import Loader from "../components/Loader";
 
-const SearchScreen = ({ location, history }) => {
+const SearchScreen = ({ location }) => {
   const [query, setQuery] = useState();
   const [searchKeyword, setSearchKeyword] = useState();
   const [isMovie, setIsMovie] = useState(true);
@@ -35,10 +35,8 @@ const SearchScreen = ({ location, history }) => {
       fetchData("movie", query);
     } else if (!isMovie && query) {
       fetchData("tv", query);
-    } else {
-      history.push("/");
     }
-  }, [location, isMovie, query, history]);
+  }, [location, isMovie, query]);
 
   const searchHandler = (e) => {
     e.preventDefault();
