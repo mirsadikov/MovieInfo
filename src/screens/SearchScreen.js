@@ -10,6 +10,7 @@ const SearchScreen = ({ location }) => {
   const [searchKeyword, setSearchKeyword] = useState();
   const [isMovie, setIsMovie] = useState(true);
   const [moviesList, setMoviesList] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // useReducer
   // const [state, dispatch] = useReducer(reducer, initialState, init)
@@ -29,25 +30,30 @@ const SearchScreen = ({ location }) => {
       console.log(moviesData);
 
       setMoviesList(moviesData.results);
+      setLoading(false);
     };
 
     if (isMovie && query) {
       fetchData("movie", query);
     } else if (!isMovie && query) {
       fetchData("tv", query);
+    } else {
+      setLoading(false);
     }
   }, [location, isMovie, query]);
 
   const searchHandler = (e) => {
     e.preventDefault();
+    setLoading(true);
     setQuery(searchKeyword);
   };
 
   const typeChangeHandler = () => {
+    setLoading(true);
     setIsMovie(!isMovie);
   };
 
-  return moviesList.length > 0 ? (
+  return !loading ? (
     <>
       <main className="result">
         <section>

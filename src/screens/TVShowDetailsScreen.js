@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import netflixIcon from "../images/netflix.png";
 import Loader from "../components/Loader";
+import noimage from "../images/no-image.png";
 
 const TVShowDetailsScreen = ({ match, history }) => {
   const movieID = match.params.id;
@@ -52,8 +53,9 @@ const TVShowDetailsScreen = ({ match, history }) => {
               id="poster"
               alt="poster"
               src={
-                movieInfo.poster_path &&
-                `https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`
+                movieInfo.poster_path
+                  ? `https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`
+                  : noimage
               }
             />
           </div>
