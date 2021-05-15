@@ -10,17 +10,29 @@ const SearchScreen = ({ location }) => {
   const [searchKeyword, setSearchKeyword] = useState();
   const [isMovie, setIsMovie] = useState(true);
   const [moviesList, setMoviesList] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   // useReducer
-  // const [state, dispatch] = useReducer(reducer, initialState, init)
+  const initialState = { loading: false };
+
+  function reducer(state, action) {
+    switch (action.type) {
+      case "input":
+        const queries = new URLSearchParams(location.search);
+        const q = queries.get("q");
+        searchKeyword ? setQuery(searchKeyword) : setQuery(q);
+        return { loading: true };
+      case "finish":
+        return { loading: false };
+      default:
+        throw new Error();
+    }
+  }
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    setLoading(true);
     window.scrollTo(0, 0);
-    const queries = new URLSearchParams(location.search);
-    const q = queries.get("q");
-    searchKeyword ? setQuery(searchKeyword) : setQuery(q);
+
+    dispatch({ type: "input" });
 
     const fetchData = async (type, query) => {
       console.log(type);
@@ -31,7 +43,7 @@ const SearchScreen = ({ location }) => {
       console.log(moviesData);
 
       setMoviesList(moviesData.results);
-      setLoading(false);
+      dispatch({ type: "finish" });
     };
 
     if (isMovie && query) {
@@ -39,7 +51,7 @@ const SearchScreen = ({ location }) => {
     } else if (!isMovie && query) {
       fetchData("tv", query);
     } else {
-      setLoading(false);
+      dispatch({ type: "finish" });
     }
   }, [location, isMovie, query]);
 
@@ -49,11 +61,10 @@ const SearchScreen = ({ location }) => {
   };
 
   const typeChangeHandler = () => {
-    setLoading(true);
     setIsMovie(!isMovie);
   };
 
-  return !loading ? (
+  return !state.loading ? (
     <>
       <main className="result">
         <section>
