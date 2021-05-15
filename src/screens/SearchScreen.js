@@ -115,7 +115,14 @@ const SearchScreen = ({ location }) => {
             moviesList.length !== 0 ? (
               <section className="figuresContainer">
                 {moviesList.map((movie) => (
-                  <Link to={`/details/${movie.id}`} key={movie.id}>
+                  <Link
+                    to={
+                      isMovie
+                        ? `/details/movie/${movie.id}`
+                        : `/details/tv/${movie.id}`
+                    }
+                    key={movie.id}
+                  >
                     <figure>
                       <img
                         src={

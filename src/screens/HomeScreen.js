@@ -63,7 +63,7 @@ const HomeScreen = ({ history }) => {
             <section className="figuresContainer">
               {trendingMovies &&
                 trendingMovies.results.map((movie) => (
-                  <Link to={`/details/${movie.id}`} key={movie.id}>
+                  <Link to={`/details/movie/${movie.id}`} key={movie.id}>
                     <figure>
                       <img
                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -85,7 +85,7 @@ const HomeScreen = ({ history }) => {
             <section className="figuresContainer">
               {nowPlayingMovies &&
                 nowPlayingMovies.results.map((movie) => (
-                  <Link to={`/details/${movie.id}`} key={movie.id}>
+                  <Link to={`/details/movie/${movie.id}`} key={movie.id}>
                     <figure>
                       <img
                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

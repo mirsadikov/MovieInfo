@@ -5,9 +5,10 @@ import Footer from "./components/Footer";
 import HomeScreen from "./screens/HomeScreen";
 import AboutScreen from "./screens/AboutScreen";
 import LoginScreen from "./screens/LoginScreen";
-import DetailsScreen from "./screens/DetailsScreen";
+import MovieDetailsScreen from "./screens/MovieDetailsScreen";
 import SearchScreen from "./screens/SearchScreen";
 import GenresScreen from "./screens/GenresScreen";
+import TVShowDetailsScreen from "./screens/TVShowDetailsScreen";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       <Switch>
         <Route path="/about" component={AboutScreen} />
         <Route path="/login" component={LoginScreen} />
-        <Route path="/details/:id" component={DetailsScreen} />
+        <Route path="/details/movie/:id" component={MovieDetailsScreen} />
+        <Route path="/details/tv/:id" component={TVShowDetailsScreen} />
         <Route path="/search" component={SearchScreen} />
         <Route path="/genres/:genre" component={GenresScreen} />
         <Route path="/" component={HomeScreen} exact />

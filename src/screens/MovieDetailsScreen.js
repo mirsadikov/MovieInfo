@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import netflixIcon from "../images/netflix.png";
 import { Spinner } from "react-bootstrap";
 
-const DetailsScreen = ({ match, history }) => {
+const MovieDetailsScreen = ({ match, history }) => {
   const movieID = match.params.id;
 
   const [movieInfo, setMovieInfo] = useState();
@@ -35,11 +35,13 @@ const DetailsScreen = ({ match, history }) => {
         <section>
           <p>
             <Link to="/">Home</Link> /{" "}
-            <Link id="details" to={`/details/${movieID}`}>
+            <Link id="details" to={`/details/movie/${movieID}`}>
               Details
             </Link>
           </p>
-          <h2 id="moviename">{movieInfo.original_title}</h2>
+          <h2 id="moviename">
+            {movieInfo.original_title || movieInfo.original_name}
+          </h2>
         </section>
       </main>
 
@@ -206,4 +208,4 @@ const DetailsScreen = ({ match, history }) => {
   );
 };
 
-export default DetailsScreen;
+export default MovieDetailsScreen;
