@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const GenresScreen = ({ match }) => {
   const [page, setpage] = useState(1);
@@ -82,22 +82,7 @@ const GenresScreen = ({ match }) => {
       </section>
     </>
   ) : (
-    <>
-      <div id="emptySpace"></div>
-      <div id="loadinggg">
-        <Spinner
-          id="spinner"
-          animation="border"
-          role="status"
-          style={{
-            width: "100px",
-            height: "100px",
-            margin: "auto",
-            display: "block",
-          }}
-        ></Spinner>
-      </div>
-    </>
+    <Loader />
   );
 };
 
