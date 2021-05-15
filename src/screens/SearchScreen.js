@@ -16,6 +16,7 @@ const SearchScreen = ({ location }) => {
   // const [state, dispatch] = useReducer(reducer, initialState, init)
 
   useEffect(() => {
+    setLoading(true);
     window.scrollTo(0, 0);
     const queries = new URLSearchParams(location.search);
     const q = queries.get("q");
@@ -44,7 +45,6 @@ const SearchScreen = ({ location }) => {
 
   const searchHandler = (e) => {
     e.preventDefault();
-    setLoading(true);
     setQuery(searchKeyword);
   };
 
