@@ -962,6 +962,11 @@ article.about > section > div:nth-child(3) {
   grid-template-columns: 1fr 1fr;
 }
 
+#root > article > section > div:nth-child(2) > p > a {
+  text-decoration: none;
+  color: #e50914;
+}
+
 /* ---------------RESPONSIVE---------------- */
 
 /* RESPONSIVE 768x1024 */
