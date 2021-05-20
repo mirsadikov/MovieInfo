@@ -38,8 +38,11 @@ const AboutScreen = () => {
               <li>JavaScript</li>
             </ul>
             <p>
-              This website doesn't use CSS (i.e. Bootstrap, Bulma, etc.) or JS
-              (i.e. JQuery) libraries to style and make pages dynamic.
+              This website is React version of{" "}
+              <a href="https://movieinfo-ms.netlify.app/">
+                movieinfo-ms.netlify.app
+              </a>
+              .{" "}
             </p>
           </div>
         </section>
