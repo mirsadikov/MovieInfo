@@ -17,7 +17,7 @@ const Footer = () => {
           <img className="networks" src={github} alt="github icon" />
         </a>
         <a
-          href="mailto:mirabrorsadikov@gmail.com"
+          href="mailto:mirabror.dev@gmail.com"
           target="_blank"
           rel="noreferrer"
         >
