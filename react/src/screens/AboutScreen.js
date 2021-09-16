@@ -32,17 +32,13 @@ const AboutScreen = () => {
           </div>
           <div>
             <ul>
-              <h3>Languages used:</h3>
-              <li>HTML</li>
+              <h3>Tools used:</h3>
+              <li>React</li>
               <li>CSS</li>
               <li>JavaScript</li>
             </ul>
             <p>
-              This website is React version of{" "}
-              <a href="https://movieinfo-ms.netlify.app/">
-                movieinfo-ms.netlify.app
-              </a>
-              .{" "}
+              This website is React version of MovieInfo.
             </p>
           </div>
         </section>

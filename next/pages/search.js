@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useState, useRef } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Head from "next/head";
@@ -14,6 +14,7 @@ export default function search() {
   const [searchKeyword, setSearchKeyword] = useState();
   const [isMovie, setIsMovie] = useState(true);
   const [moviesList, setMoviesList] = useState([]);
+  const ref = useRef();
 
   // useReducer
   const initialState = { loading: false };
@@ -48,6 +49,10 @@ export default function search() {
 
       setMoviesList(moviesData.results);
       dispatch({ type: "finish" });
+      window.scrollBy({
+        top: ref.current.offsetTop - window.scrollY - 100,
+        behavior: "smooth",
+      });
     };
 
     if (isMovie && query) {
@@ -102,7 +107,7 @@ export default function search() {
             </section>
           </main>
           <section className="content">
-            <div id="content-type">
+            <div id="content-type" ref={ref}>
               <label>
                 <input
                   type="radio"

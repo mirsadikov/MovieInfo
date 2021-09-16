@@ -32,17 +32,13 @@ export default function about() {
           </div>
           <div>
             <ul>
-              <h3>Languages used:</h3>
-              <li>HTML</li>
+              <h3>Tools used:</h3>
+              <li>NextJS</li>
               <li>CSS</li>
               <li>JavaScript</li>
             </ul>
             <p>
-              This website is Next.js version of{" "}
-              <a href="https://movieinfo-ms.netlify.app/">
-                movieinfo-ms.netlify.app
-              </a>
-              .
+              This website is Next.js version of MovieInfo.
             </p>
           </div>
         </section>

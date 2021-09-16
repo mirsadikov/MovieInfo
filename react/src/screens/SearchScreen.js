@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import noimage from "../images/no-image.png";
 import duck from "../images/duck.gif";
@@ -10,6 +10,8 @@ const SearchScreen = ({ location }) => {
   const [searchKeyword, setSearchKeyword] = useState();
   const [isMovie, setIsMovie] = useState(true);
   const [moviesList, setMoviesList] = useState([]);
+
+  const ref = useRef();
 
   // useReducer
   const initialState = { loading: false };
@@ -44,6 +46,10 @@ const SearchScreen = ({ location }) => {
 
       setMoviesList(moviesData.results);
       dispatch({ type: "finish" });
+      window.scrollBy({
+        top: ref.current.offsetTop - window.scrollY - 100,
+        behavior: "smooth",
+      });
     };
 
     if (isMovie && query) {
@@ -88,7 +94,7 @@ const SearchScreen = ({ location }) => {
         </section>
       </main>
       <section className="content">
-        <div id="content-type">
+        <div id="content-type" ref={ref}>
           <label>
             <input
               type="radio"

@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div>
         Copyright &copy;
-        <script>document.write(new Date().getFullYear());</script>
+        {new Date().getFullYear()}
       </div>
       <div>
         Links:
