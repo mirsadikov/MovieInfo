@@ -1,3 +1,4 @@
 module.exports = {
-  basePath: "/next/out",
+  basePath: "/next/build",
+  trailingSlash: true,
 };

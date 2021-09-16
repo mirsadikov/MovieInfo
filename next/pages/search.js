@@ -161,7 +161,7 @@ export default function search() {
                                 ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
                                 : movie.backdrop_path
                                 ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`
-                                : "/static/images/no-image.png"
+                                : "/next/build/static/images/no-image.png"
                             }
                             alt={movie.id}
                           />
@@ -177,7 +177,7 @@ export default function search() {
                     <h1>No movies</h1>
                     <img
                       className="duck"
-                      src="/static/images/duck.gif"
+                      src="/next/build/static/images/duck.gif"
                       alt="duck"
                     />
                   </>

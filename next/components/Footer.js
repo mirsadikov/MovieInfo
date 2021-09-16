@@ -14,7 +14,7 @@ export default function Footer() {
         >
           <img
             className="networks"
-            src="/static/images/github.svg"
+            src="/next/build/static/images/github.svg"
             alt="github icon"
           />
         </a>

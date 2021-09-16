@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:react": "npm install --prefix react && npm run build --prefix react",
-    "build:next": " npm install --prefix next && npm run build --prefix next",
-    "build": "npm run build:react && npm run build:next"
+    "next:build": "npm run build --prefix next",
+    "react:build": "npm run build --prefix react",
+    "react:prebuild": "npm install --prefix react && npm run build --prefix react",
+    "next:prebuild": " npm install --prefix next && npm run build --prefix next",
+    "prebuild": "npm run react:prebuild && npm run next:prebuild"
   }
 }

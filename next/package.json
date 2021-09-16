@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build & next export -o build",
+    "build": "next build && next export -o build",
     "start": "next start"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "movieinfo": "file:..",
     "next": "10.2.0",
     "react": "17.0.2",
     "react-bootstrap": "^1.6.0",

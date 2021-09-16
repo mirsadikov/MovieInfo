@@ -68,7 +68,7 @@ export default function tv() {
                   src={
                     movieInfo.poster_path
                       ? `https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`
-                      : "/static/images/no-image.png"
+                      : "/next/build/static/images/no-image.png"
                   }
                 />
               </div>
@@ -102,7 +102,7 @@ export default function tv() {
               <span>Watch on:</span>
               <a href="https://netflix.com" target="_blank" rel="noreferrer">
                 <button>
-                  <img src="/static/images/netflix.png" alt="netflix" />
+                  <img src="/next/build/static/images/netflix.png" alt="netflix" />
                 </button>
               </a>
             </div>
