@@ -1,13 +1,11 @@
 {
   "name": "movieinfo",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
+    "install:all": "npm install --prefix react && npm install --prefix next",
     "next:build": "npm run build --prefix next",
     "react:build": "npm run build --prefix react",
-    "react:prebuild": "npm install --prefix react && npm run build --prefix react",
-    "next:prebuild": " npm install --prefix next && npm run build --prefix next",
-    "prebuild": "npm run react:prebuild && npm run next:prebuild"
+    "build": "npm run react:build && npm run next:build"
   }
 }

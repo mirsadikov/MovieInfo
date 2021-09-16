@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react/build/static/css/main.ecad54cb.chunk.css",
+    "main.js": "/react/build/static/js/main.20133933.chunk.js",
+    "main.js.map": "/react/build/static/js/main.20133933.chunk.js.map",
+    "runtime-main.js": "/react/build/static/js/runtime-main.2df1abc4.js",
+    "runtime-main.js.map": "/react/build/static/js/runtime-main.2df1abc4.js.map",
+    "static/js/2.09e11b50.chunk.js": "/react/build/static/js/2.09e11b50.chunk.js",
+    "static/js/2.09e11b50.chunk.js.map": "/react/build/static/js/2.09e11b50.chunk.js.map",
+    "index.html": "/react/build/index.html",
+    "static/css/main.ecad54cb.chunk.css.map": "/react/build/static/css/main.ecad54cb.chunk.css.map",
+    "static/js/2.09e11b50.chunk.js.LICENSE.txt": "/react/build/static/js/2.09e11b50.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/react/build/static/media/bg.b85a0374.jpg",
+    "static/media/duck.c2a3ec53.gif": "/react/build/static/media/duck.c2a3ec53.gif",
+    "static/media/github.692a737a.svg": "/react/build/static/media/github.692a737a.svg",
+    "static/media/netflix.774e8c16.png": "/react/build/static/media/netflix.774e8c16.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2df1abc4.js",
+    "static/js/2.09e11b50.chunk.js",
+    "static/css/main.ecad54cb.chunk.css",
+    "static/js/main.20133933.chunk.js"
+  ]
+}
