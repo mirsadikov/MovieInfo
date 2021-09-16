@@ -937,6 +937,7 @@ article.about > section > div:nth-child(1) {
 article.about > section > div:nth-child(2) {
   background: rgba(207, 207, 207, 0.2);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   position: relative;
   top: -30px;
   left: 10%;
@@ -2642,6 +2643,7 @@ section.media-wrapper {
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;
