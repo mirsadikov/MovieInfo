@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/result.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <a class="brand" href="./index.html"><h1>MovieInfo</h1></a>
+      <nav>
+        <ul>
+          <li class="home"><a href="./index.html">Home</a></li>
+          <li class="about"><a href="./about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- results main section -->
+    <main class="result">
+      <section>
+        <p>
+          <a href="./index.html">Home</a> / <a href="./result.html">Search</a>
+        </p>
+        <h2 id="resultpath">Search</h2>
+        <div class="container">
+          <form action="./result.html#resultpath">
+            <input
+              type="text"
+              placeholder="Search by name..."
+              id="movieNameInput"
+            />
+            <button type="submit" id="searchButton">Search</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- results content -->
+    <section class="content">
+      <div id="content-type">
+        <label
+          ><input
+            type="radio"
+            hidden
+            checked
+            id="type-movie"
+            class="type-input"
+            name="type"
+          />
+          <div id="typemovie" class="movieType">Movies</div></label
+        ><label
+          ><input
+            type="radio"
+            hidden
+            id="type-serie"
+            class="type-input"
+            name="type"
+          />
+          <div id="typeserie" class="movieType">TV shows</div></label
+        >
+      </div>
+
+      <section id="resultContainer">
+        <h1>Search something</h1>
+      </section>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div>
+        Copyright &copy
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+      <div>
+        Links:
+        <a href="https://github.com/mirsadikov" target="_blank"
+          ><img class="networks" src="./images/github.svg"
+        /></a>
+        <a href="mailto:mirabror.dev@gmail.com" target="_blank"
+          ><span class="networks">@</span></a
+        >
+      </div>
+      <div>This is a simple movie info website.</div>
+    </footer>
+
+    <!-- JavaScript reference -->
+    <script src="./js/result.js"></script>
+  </body>
+</html>

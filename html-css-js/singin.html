@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/signin.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <a class="brand" href="./index.html"><h1>MovieInfo</h1></a>
+      <nav>
+        <ul>
+          <li class="home"><a href="./index.html">Home</a></li>
+          <li class="about"><a href="./about.html">About</a></li>
+          <li class="search"><a href="./result.html">Search</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- sign in form section -->
+    <section class="signin">
+      <div class="container">
+        <h1>Sign in</h1>
+        <form action="">
+          <label>
+            <p>Email</p>
+            <input
+              type="email"
+              name="userLogin"
+              placeholder="example@mail.com"
+              id="userLogin"
+            />
+          </label>
+
+          <label>
+            <p>Password</p>
+            <input
+              type="password"
+              name="userPassword"
+              placeholder="At least 8 characters"
+              id="userPassword"
+            />
+          </label>
+          <button type="submit" id="submit">Sign in</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div>
+        Copyright &copy
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+      <div>
+        Links:
+        <a href="https://github.com/mirsadikov" target="_blank"
+          ><img class="networks" src="./images/github.svg"
+        /></a>
+        <a href="mailto:mirabror.dev@gmail.com" target="_blank"
+          ><span class="networks">@</span></a
+        >
+      </div>
+      <div>This is a simple movie info website.</div>
+    </footer>
+
+    <!-- JavaScript reference -->
+    <script src="./js/signin.js"></script>
+  </body>
+</html>

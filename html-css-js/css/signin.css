@@ -1,0 +1,136 @@
+header{
+    background-color: #222222;
+}
+section.signin{
+    margin-top: 50px;
+    background: 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), 
+    url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signin .container{
+    width: 450px;
+    background-color: #555555;
+    margin: 110px 50px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px 70px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.signin h1{
+    color: white;
+    margin-top: 50px;
+    font-size: 2rem;
+}
+.signin p{
+    margin: 35px 0 5px 10px;
+    font-size: 14px;
+    color: #999999;
+
+}
+.signin form input{
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+    padding: 10px 20px;
+    color: white;
+}
+
+button{
+    background-color: #E50914 !important;
+    color: white;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-weight: 700;
+}
+footer{
+    margin: 0;
+}
+
+
+/* -----------RESPONSIVE------------ */
+
+
+/* 426px and 575px */
+@media screen and (max-width:575px){
+    html, body{
+        overflow-x: hidden;
+    }
+    header {
+        padding: 20px 15px;
+    }
+    header ul a{
+        padding: 10px !important;
+    }
+    .signin .container{
+        width: 80%;
+        margin: 110px auto 50px;
+        padding: 40px 35px;
+    }
+    .signin .container h1{
+        margin-top: 0px;
+    }
+    .signin .container button{
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* 351px and 425px */
+@media screen and (max-width:425px){
+    html, body{
+        overflow-x: hidden;
+    }
+    header ul{
+        margin-bottom: 0px;
+    }
+    header{
+        display: block;
+    }
+    .signin .container{
+        width: 90%;
+        margin: 110px auto 50px;
+        padding: 40px 25px;
+    }
+    .signin .container h1{
+        margin-top: 0px;
+    }
+    .signin .container button{
+        margin-bottom: 10px;
+    }
+}
+
+
+/* under 350 px */
+@media screen and (max-width:350px){
+    html, body{
+        overflow-x: hidden;
+    }
+    .signin .container{
+        width: 90%;
+        margin: 110px auto 50px;
+        padding: 40px 20px;
+    }
+    .signin .container h1{
+        margin-top: 0px;
+    }
+    .signin .container button{
+        margin-bottom: 10px;
+    }
+}

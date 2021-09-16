@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genres</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/bygenres.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <a class="brand" href="./index.html"><h1>MovieInfo</h1></a>
+      <nav>
+        <ul>
+          <li class="home"><a href="./index.html">Home</a></li>
+          <li class="about"><a href="./about.html">About</a></li>
+          <li class="search"><a href="./result.html">Search</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- genres main section -->
+    <main class="genre">
+      <section>
+        <p>
+          <a href="./index.html">Home</a> /
+          <a href="./index.html??#genre">Genres</a>
+        </p>
+        <h2 id="genrename"></h2>
+      </section>
+    </main>
+    <section class="content">
+      <section id="resultContainer"></section>
+      <button id="more">MORE</button>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div>
+        Copyright &copy
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+      <div>
+        Links:
+        <a href="https://github.com/mirsadikov" target="_blank"
+          ><img class="networks" src="./images/github.svg"
+        /></a>
+        <a href="mailto:mirabror.dev@gmail.com" target="_blank"
+          ><span class="networks">@</span></a
+        >
+      </div>
+      <div>This is a simple movie info website.</div>
+    </footer>
+
+    <!-- JavaScript reference -->
+    <script src="./js/bygenres.js"></script>
+  </body>
+</html>
